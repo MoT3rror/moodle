@@ -315,14 +315,16 @@ echo $OUTPUT->doctype() ?>
 	</div>
 	<?php } ?>
 
-	<footer id="page-footer" class="container-fluid">
-		<?php require_once(dirname(__FILE__).'/includes/footer.php'); ?>
-	</footer>
+	<!--<footer id="page-footer" class="container-fluid">
+		<?php //require_once(dirname(__FILE__).'/includes/footer.php'); ?>
+	</footer>-->
 
     <?php echo $OUTPUT->standard_end_of_body_html() ?>
 
 </div>
-
+<?php
+require_once(dirname(__FILE__) . '/includes/hlgfooter.php');
+?>
 <!-- Start Google Analytics -->
 <?php if ($hasanalytics) { ?>
 	<?php require_once(dirname(__FILE__).'/includes/analytics.php'); ?>

@@ -177,7 +177,7 @@
             }
         }
 
-        $branch = $menu->add('Student Portal', new moodle_url('https://www.hlg.edu/estudent'), get_string('themecolors', 'theme_essential'), 12000);
+        //$branch = $menu->add('Student Portal', new moodle_url('https://www.hlg.edu/estudent'), get_string('themecolors', 'theme_essential'), 12000);
  
         return parent::render_custom_menu($menu);
     }

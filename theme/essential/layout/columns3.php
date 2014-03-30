@@ -59,7 +59,7 @@ echo $OUTPUT->doctype() ?>
 </head>
 
 <body <?php echo $OUTPUT->body_attributes($bodyclasses); ?>>
-here
+
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 
 <?php require_once(dirname(__FILE__).'/includes/header.php'); ?>

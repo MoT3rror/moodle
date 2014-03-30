@@ -52,22 +52,12 @@ if (!empty($_SERVER['HTTP_USER_AGENT'])) {
     $checkuseragent = $_SERVER['HTTP_USER_AGENT'];
 }
 ?>
-
 <?php
 // Check if IE7 browser and display message
 if (strpos($checkuseragent, 'MSIE 7')) {
 	echo get_string('ie7message', 'theme_essential');
 }?>
-<div class="column top-nav">
-    <ul>
-        <li class="apply" style="padding-bottfont-family: Arial, Helvetica, sans-serif; font-size:12px; margin-rigbackground-size: 100%;"><a href="/admissions/apply.php" style="line-height:10px; ">Apply Now <span>›</span></a></li>
-        <li class="events hide-on-phones"><a href="/newsinfo/calendar.php">Event Calendar</a></li>
-            <li class="events show-on-phones" style="widtbackground-size: 100%; margin-left:3px; width:90px !important; background-position:top !important;"><a href="/newsinfo/calendar.php">Events</a></li>
-        <li class="apply hide-on-phones" style="background-size:98%;padding-bottfont-family: Arial, Helvetica, sans-serif; font-size:12px;  "><a href="http://www.hlg.edu/academics/online.php">Online Learning<<li class="apply show-on-phones" style="background-size:98%;padding-bottfont-family: Arial, Helvetica, sans-serif; font-size:12px; width: 90px; height:13px !immargin-le}"><a href="http://www.hlg.edu/academics/online.php">Online<
-        <li class="hide-on-phones"><a href="/estudent/index.asp">Student Portal</a></li>
-        <li class="hide-on-phones"><a href="/efaculty/index.asp" style="border-left: 1px solid #FFF;">Faculty Portal</a></li>
-    </ul>
-</div>
+
 <?php
 if (strpos($checkuseragent, 'MSIE 8') || strpos($checkuseragent, 'MSIE 7')) {?>
     <header id="page-header-IE7-8" class="clearfix">
@@ -79,7 +69,30 @@ if (strpos($checkuseragent, 'MSIE 8') || strpos($checkuseragent, 'MSIE 7')) {?>
 
     <div class="container-fluid">
     <div class="row-fluid">
+        <ul class="hlgnav" id="hlgnav">
+            <li class="apply">
+                <a href="/admissions/apply.php">Apply Now <span>›</span></a>
+            </li>
+            <li class="events notonphone">
+                <a href="/newsinfo/calendar.php">Event Calendar</a>
+            </li>
+            <li class="events show-on-phones">
+                <a href="/newsinfo/calendar.php">Events</a>
+            </li>
+            <li class="apply notonphone">
+                <a href="http://www.hlg.edu/academics/online.php">Online Learning</a>
+            </li>
 
+            <li class="apply show-on-phones">
+                <a href="http://www.hlg.edu/academics/online.php">Online</a>
+            </li>
+            <li class="notonphone">
+                <a href="/estudent/index.asp">Student Portal</a>
+            </li>
+            <li class="notonphone">
+                <a href="/efaculty/index.asp"">Faculty Portal</a>
+            </li>
+        </ul>
     <!-- HEADER: LOGO AREA -->
         <?php if ($hassocialnetworks && $hasmobileapps) { ?>
         	<div class="span6">
@@ -90,7 +103,7 @@ if (strpos($checkuseragent, 'MSIE 8') || strpos($checkuseragent, 'MSIE 7')) {?>
         <?php } else { ?>
         	<div class="span11">
         <?php } ?>
-            <?php if (!$haslogo) { ?>
+            <!--<?php if (!$haslogo) { ?>
                 <i id="headerlogo" class="fa fa-<?php echo $PAGE->theme->settings->siteicon ?>"></i>
                 <?php if ($hastagline) { ?>
                 	<h1 id="title"><?php echo $SITE->shortname; ?></h1>
@@ -102,7 +115,7 @@ if (strpos($checkuseragent, 'MSIE 8') || strpos($checkuseragent, 'MSIE 7')) {?>
             <?php } else { ?>
                 
                 <a class="logo" href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>"></a>
-            <?php } ?>
+            <?php } ?>-->
         </div>
         <?php if (isloggedin() && $hasheaderprofilepic) { ?>
         <div class="span1 pull-right" id="profilepic">
