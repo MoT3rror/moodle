@@ -76,23 +76,28 @@ if (strpos($checkuseragent, 'MSIE 8') || strpos($checkuseragent, 'MSIE 7')) {?>
             <li class="events notonphone">
                 <a href="/newsinfo/calendar.php">Event Calendar</a>
             </li>
-            <li class="events show-on-phones">
+            <li class="events notondesktop">
                 <a href="/newsinfo/calendar.php">Events</a>
             </li>
             <li class="apply notonphone">
                 <a href="http://www.hlg.edu/academics/online.php">Online Learning</a>
             </li>
 
-            <li class="apply show-on-phones">
+            <li class="apply notondesktop">
                 <a href="http://www.hlg.edu/academics/online.php">Online</a>
             </li>
             <li class="notonphone">
                 <a href="/estudent/index.asp">Student Portal</a>
             </li>
+            <li class="notonphone" style="margin: 0; padding: 0">|</li>
             <li class="notonphone">
                 <a href="/efaculty/index.asp"">Faculty Portal</a>
             </li>
         </ul>
+        <div class="hlgarch">
+            <img src="http://www.hlg.edu/com/images/header/main-logo.png" class="hlglogo notonphone" />
+            <img src="http://www.hlg.edu/com/images/footer/footer_logo.png" class="hlglogomobile notondesktop" style="" />
+        </div>
     <!-- HEADER: LOGO AREA -->
         <?php if ($hassocialnetworks && $hasmobileapps) { ?>
         	<div class="span6">

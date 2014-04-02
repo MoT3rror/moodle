@@ -54,14 +54,18 @@ echo $OUTPUT->doctype() ?>
         </section>
     </div>
 
-    <footer id="page-footer">
+    <!--<footer id="page-footer">
         <?php
         echo $OUTPUT->standard_footer_html();
         ?>
-    </footer>
+    </footer>-->
 
     <?php echo $OUTPUT->standard_end_of_body_html() ?>
 
 </div>
+
+<?php
+require_once(dirname(__FILE__) . '/includes/hlgfooter.php');
+?>
 </body>
 </html>
